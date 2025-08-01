@@ -1,5 +1,5 @@
 class Pixel:
-    def __init__(self, pin):
+    def __init__(self, pin = 16):
         import neopixel
         import machine
         self.pin = machine.Pin(pin)
@@ -11,7 +11,7 @@ class Pixel:
 
 from time import sleep
 
-pixel = Pixel(16)
+pixel = Pixel()
 
 pixel.set(255, 0, 0)
 sleep(0.1)
