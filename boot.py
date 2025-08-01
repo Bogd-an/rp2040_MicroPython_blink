@@ -6,7 +6,7 @@ class Pixel:
         self.np = neopixel.NeoPixel(self.pin, 1)
 
     def set(self, r, g, b):
-        self.np[0] = (r, b, b)
+        self.np[0] = (r, g, b)
         self.np.write()
 
 from time import sleep
