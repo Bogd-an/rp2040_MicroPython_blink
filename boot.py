@@ -2,8 +2,8 @@ class Pixel:
     def __init__(self, pin):
         import neopixel
         import machine
-        self.pin = machine.Pin(16)
-        self.np = neopixel.NeoPixel(machine.Pin(16), 1)
+        self.pin = machine.Pin(pin)
+        self.np = neopixel.NeoPixel(self.pin, 1)
 
     def set(self, r, g, b):
         self.np[0] = (r, b, b)
